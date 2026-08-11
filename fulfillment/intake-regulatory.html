@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strategic Comment Writing — Client Intake | Forthright Legacy LLC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: #0a0f1e;
+      color: #f0ece4;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      min-height: 100vh;
+      padding: 48px 20px 80px;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .brand {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .brand-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 13px;
+      font-weight: 300;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #c9a96e;
+      margin-bottom: 6px;
+    }
+    .brand-rule {
+      width: 48px;
+      height: 1px;
+      background: #c9a96e;
+      margin: 0 auto;
+      opacity: 0.6;
+    }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .page-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(30px, 6vw, 44px);
+      font-weight: 600;
+      color: #ffffff;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+    .page-title span { color: #c9a96e; }
+    .page-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 300;
+      font-style: italic;
+      color: rgba(240, 236, 228, 0.75);
+      letter-spacing: 0.02em;
+    }
+
+    .gold-divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 40px 0;
+    }
+    .gold-divider::before,
+    .gold-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #c9a96e 50%, transparent);
+      opacity: 0.4;
+    }
+    .gold-divider-diamond {
+      width: 6px;
+      height: 6px;
+      background: #c9a96e;
+      transform: rotate(45deg);
+      flex-shrink: 0;
+      opacity: 0.8;
+    }
+
+    form { display: flex; flex-direction: column; gap: 32px; }
+    .field-group { display: flex; flex-direction: column; gap: 8px; }
+
+    .field-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      color: #c9a96e;
+      text-transform: uppercase;
+    }
+
+    label {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(240, 236, 228, 0.9);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    select {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(201, 169, 110, 0.25);
+      border-radius: 4px;
+      color: #f0ece4;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 300;
+      padding: 14px 16px;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    input[type="text"]::placeholder,
+    input[type="email"]::placeholder,
+    textarea::placeholder { color: rgba(240, 236, 228, 0.25); }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus,
+    select:focus {
+      border-color: rgba(201, 169, 110, 0.65);
+      background: rgba(201, 169, 110, 0.05);
+      box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.08);
+    }
+    textarea { resize: vertical; min-height: 120px; }
+
+    select { cursor: pointer; }
+    select option { background: #111827; color: #f0ece4; }
+
+    .radio-group {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .radio-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 300;
+      color: rgba(240, 236, 228, 0.85);
+      text-transform: none;
+      letter-spacing: 0;
+    }
+    input[type="radio"] {
+      width: 18px;
+      height: 18px;
+      border: 1px solid rgba(201, 169, 110, 0.45);
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.04);
+      cursor: pointer;
+      appearance: none;
+      -webkit-appearance: none;
+      flex-shrink: 0;
+      display: grid;
+      place-content: center;
+      transition: border-color 0.2s;
+    }
+    input[type="radio"]::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #c9a96e;
+      transform: scale(0);
+      transition: transform 0.15s ease;
+    }
+    input[type="radio"]:checked { border-color: #c9a96e; }
+    input[type="radio"]:checked::before { transform: scale(1); }
+
+    .submit-wrapper { text-align: center; margin-top: 8px; }
+    .btn-submit {
+      display: inline-block;
+      background: linear-gradient(135deg, #c9a96e 0%, #b8903a 100%);
+      color: #0a0f1e;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 18px 48px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.15s;
+    }
+    .btn-submit:hover { opacity: 0.88; transform: translateY(-1px); }
+    .btn-submit:active { transform: translateY(0); }
+
+    .confidentiality {
+      text-align: center;
+      font-size: 12px;
+      font-weight: 300;
+      color: rgba(240, 236, 228, 0.35);
+      letter-spacing: 0.04em;
+      margin-top: 24px;
+      font-style: italic;
+    }
+
+    .page-footer {
+      text-align: center;
+      margin-top: 64px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(201, 169, 110, 0.12);
+    }
+    .footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(201, 169, 110, 0.5);
+    }
+
+    @media (max-width: 480px) {
+      body { padding: 32px 16px 60px; }
+      .btn-submit { width: 100%; padding: 18px 24px; }
+      .radio-group { flex-direction: column; gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="brand">
+      <p class="brand-name">Forthright Legacy LLC &nbsp;·&nbsp; Regulatory Affairs Division</p>
+      <div class="brand-rule"></div>
+    </div>
+
+    <header class="page-header">
+      <h1 class="page-title">Strategic <span>Comment Writing</span></h1>
+      <p class="page-subtitle">Complete this form to begin your federal regulatory comment engagement.</p>
+    </header>
+
+    <div class="gold-divider"><div class="gold-divider-diamond"></div></div>
+
+    <form id="regulatoryForm" onsubmit="submitForm(event)">
+
+      <div class="field-group">
+        <span class="field-number">01</span>
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Your full name" required />
+      </div>
+
+      <div class="field-group">
+        <span class="field-number">02</span>
+        <label for="titleCompany">Title &amp; Company</label>
+        <input type="text" id="titleCompany" name="titleCompany" placeholder="e.g. Director of Compliance, Meridian Defense Group" required />
+      </div>
+
+      <div class="field-group">
+        <span class="field-number">03</span>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="your@email.com" required />
+      </div>
+
+      <div class="field-group">
+        <span class="field-number">04</span>
+        <label for="industry">Industry</label>
+        <input type="text" id="industry" name="industry" placeholder="e.g. Defense contracting, pharmaceuticals, AI / technology, healthcare" required />
+      </div>
+
+      <div class="field-group">
+        <span class="field-number">05</span>
+        <label for="rulemaking">Specific Regulation or Rulemaking</label>
+        <textarea id="rulemaking" name="rulemaking" placeholder="Which regulation or rulemaking are you concerned about? Include the agency name and docket number if known — e.g. "CMS-2026-0045"" rows="4" required></textarea>
+      </div>
+
+      <div class="field-group">
+        <span class="field-number">06</span>
+        <label for="position">Your Organization's Position</label>
+        <textarea id="position" name="position" placeholder="What is your organization's primary concern or position regarding this rule?" rows="5" required></textarea>
+      </div>
+
+      <div class="field-group">
+        <span class="field-number">07</span>
+        <label for="impact">Operational Impact</label>
+        <textarea id="impact" name="impact" placeholder="How would this rule directly impact your operations, revenue, or competitive position?" rows="5" required></textarea>
+      </div>
+
+      <div class="field-group">
+        <span class="field-number">08</span>
+        <label for="provisions">Specific Provisions or Language</label>
+        <textarea id="provisions" name="provisions" placeholder="Are there any specific provisions, sections, or language in the proposed rule you want addressed?" rows="4"></textarea>
+      </div>
+
+      <div class="field-group">
+        <span class="field-number">09</span>
+        <label>Previous Public Comments Submitted?</label>
+        <div class="radio-group">
+          <label class="radio-label">
+            <input type="radio" name="previousComments" value="No" checked />
+            No
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="previousComments" value="Yes" />
+            Yes
+          </label>
+        </div>
+        <textarea id="previousDetail" name="previousDetail" placeholder="If yes — briefly describe the prior comment(s)." rows="3" style="margin-top: 12px;"></textarea>
+      </div>
+
+      <div class="field-group">
+        <span class="field-number">10</span>
+        <label for="desiredOutcome">Desired Outcome</label>
+        <textarea id="desiredOutcome" name="desiredOutcome" placeholder='e.g. "We want the agency to delay implementation," "We want an exemption for small contractors"' rows="4" required></textarea>
+      </div>
+
+      <div class="submit-wrapper">
+        <button type="submit" class="btn-submit">Submit Intake →</button>
+        <p class="confidentiality">All submissions are handled with strict confidentiality.</p>
+      </div>
+
+    </form>
+
+    <div class="gold-divider" style="margin-top: 48px;"><div class="gold-divider-diamond"></div></div>
+
+    <footer class="page-footer">
+      <p class="footer-brand">Forthright Legacy LLC &nbsp;|&nbsp; Regulatory Affairs Division</p>
+    </footer>
+
+  </div>
+
+  <script>
+    function submitForm(e) {
+      e.preventDefault();
+      const f = e.target;
+      const name = f.fullName.value.trim();
+      const prevComment = f.previousComments.value;
+      const prevDetail  = f.previousDetail.value.trim();
+
+      const body = [
+        "STRATEGIC COMMENT WRITING — CLIENT INTAKE",
+        "=".repeat(44),
+        "",
+        "01. Full Name: " + name,
+        "02. Title & Company: " + f.titleCompany.value.trim(),
+        "03. Email Address: " + f.email.value.trim(),
+        "",
+        "04. Industry:",
+        f.industry.value.trim(),
+        "",
+        "05. Regulation / Rulemaking:",
+        f.rulemaking.value.trim(),
+        "",
+        "06. Organization's Position:",
+        f.position.value.trim(),
+        "",
+        "07. Operational Impact:",
+        f.impact.value.trim(),
+        "",
+        "08. Specific Provisions:",
+        f.provisions.value.trim() || "(not specified)",
+        "",
+        "09. Previous Public Comments: " + prevComment,
+        prevDetail ? "Detail: " + prevDetail : "",
+        "",
+        "10. Desired Outcome:",
+        f.desiredOutcome.value.trim(),
+        "",
+        "=".repeat(44),
+        "Submitted via Forthright Legacy LLC | Strategic Comment Writing Intake Form"
+      ].filter(line => line !== undefined).join("\n");
+
+      const subject = encodeURIComponent("Strategic Comment Intake — " + name);
+      const bodyEnc = encodeURIComponent(body);
+      window.location.href = "mailto:randy.sumter@forthrightlegacy.org?subject=" + subject + "&body=" + bodyEnc;
+    }
+  </script>
+</body>
+</html>
