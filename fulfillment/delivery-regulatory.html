@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strategic Comment Writing — Delivery Package | Forthright Legacy LLC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: #0a0f1e;
+      color: #f0ece4;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      line-height: 1.75;
+      min-height: 100vh;
+      padding: 56px 20px 96px;
+    }
+
+    .container { max-width: 680px; margin: 0 auto; }
+
+    /* ── Brand bar ── */
+    .brand { text-align: center; margin-bottom: 40px; }
+    .brand-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: #c9a96e;
+      margin-bottom: 6px;
+    }
+    .brand-rule { width: 48px; height: 1px; background: #c9a96e; margin: 0 auto; opacity: 0.55; }
+
+    /* ── Page header ── */
+    .page-header { text-align: center; margin-bottom: 48px; }
+    .page-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(30px, 5.5vw, 44px);
+      font-weight: 600;
+      color: #ffffff;
+      line-height: 1.15;
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+    .page-title span { color: #c9a96e; }
+    .page-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 17px;
+      font-weight: 300;
+      font-style: italic;
+      color: rgba(240, 236, 228, 0.7);
+    }
+
+    /* ── Divider ── */
+    .gold-divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 36px 0;
+    }
+    .gold-divider::before, .gold-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #c9a96e 50%, transparent);
+      opacity: 0.35;
+    }
+    .gold-divider-diamond {
+      width: 6px;
+      height: 6px;
+      background: #c9a96e;
+      transform: rotate(45deg);
+      opacity: 0.75;
+      flex-shrink: 0;
+    }
+
+    /* ── Engagement summary header card ── */
+    .summary-card {
+      border: 1px solid rgba(201, 169, 110, 0.22);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 48px;
+    }
+    .summary-card-header {
+      background: rgba(201, 169, 110, 0.08);
+      padding: 20px 28px 16px;
+      border-bottom: 1px solid rgba(201, 169, 110, 0.15);
+    }
+    .summary-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+    .summary-card-subtitle {
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      color: rgba(201, 169, 110, 0.65);
+      text-transform: uppercase;
+    }
+    .summary-card-body { padding: 0; }
+    .summary-row {
+      display: flex;
+      align-items: baseline;
+      gap: 20px;
+      padding: 15px 28px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+    .summary-row:last-child { border-bottom: none; }
+    .summary-row-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(201, 169, 110, 0.55);
+      white-space: nowrap;
+      min-width: 130px;
+    }
+    .summary-row-value {
+      font-size: 15px;
+      font-weight: 300;
+      color: rgba(240, 236, 228, 0.9);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 17px;
+    }
+    .placeholder {
+      display: inline-block;
+      background: rgba(201, 169, 110, 0.1);
+      border: 1px dashed rgba(201, 169, 110, 0.3);
+      border-radius: 2px;
+      padding: 2px 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: rgba(201, 169, 110, 0.7);
+      letter-spacing: 0.04em;
+      font-style: italic;
+    }
+
+    /* ── Section blocks ── */
+    .section { margin-bottom: 44px; }
+    .section-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      color: rgba(201, 169, 110, 0.55);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+    .section-body {
+      font-size: 15px;
+      font-weight: 300;
+      color: rgba(240, 236, 228, 0.82);
+      line-height: 1.8;
+    }
+
+    /* ── Comment summary box ── */
+    .comment-box {
+      border: 1px solid rgba(201, 169, 110, 0.2);
+      border-left: 3px solid rgba(201, 169, 110, 0.55);
+      border-radius: 0 4px 4px 0;
+      padding: 22px 24px;
+      background: rgba(201, 169, 110, 0.03);
+    }
+    .comment-box .placeholder {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+      font-style: italic;
+      font-weight: 300;
+      color: rgba(240, 236, 228, 0.55);
+      letter-spacing: 0.01em;
+      border: none;
+      background: none;
+      padding: 0;
+    }
+
+    /* ── Process list ── */
+    .process-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      counter-reset: process-counter;
+    }
+    .process-list li {
+      display: flex;
+      gap: 18px;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      align-items: flex-start;
+    }
+    .process-list li:last-child { border-bottom: none; }
+    .process-num {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border: 1px solid rgba(201, 169, 110, 0.35);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: #c9a96e;
+      margin-top: 1px;
+    }
+    .process-text {
+      font-size: 15px;
+      font-weight: 300;
+      color: rgba(240, 236, 228, 0.82);
+      line-height: 1.7;
+    }
+    .process-text strong { color: #ffffff; font-weight: 500; }
+
+    /* ── Docket link box ── */
+    .docket-box {
+      border: 1px solid rgba(201, 169, 110, 0.2);
+      border-radius: 4px;
+      padding: 22px 24px;
+      background: rgba(255, 255, 255, 0.02);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .docket-icon {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      border: 1px solid rgba(201, 169, 110, 0.3);
+      border-radius: 3px;
+      display: grid;
+      place-content: center;
+    }
+    .docket-icon svg { opacity: 0.7; }
+    .docket-link-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(201, 169, 110, 0.5);
+      margin-bottom: 4px;
+    }
+    .docket-link-value .placeholder {
+      font-size: 14px;
+    }
+
+    /* ── Follow-up box ── */
+    .followup-box {
+      border: 1px solid rgba(201, 169, 110, 0.18);
+      border-radius: 4px;
+      padding: 28px;
+      background: rgba(201, 169, 110, 0.03);
+    }
+    .followup-box p {
+      font-size: 15px;
+      font-weight: 300;
+      color: rgba(240, 236, 228, 0.8);
+      line-height: 1.8;
+    }
+    .followup-box p strong { color: #c9a96e; font-weight: 500; }
+
+    /* ── Closing ── */
+    .closing-block {
+      text-align: center;
+      margin-top: 56px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(201, 169, 110, 0.12);
+    }
+    .closing-firm {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(240, 236, 228, 0.7);
+      margin-bottom: 6px;
+    }
+    .closing-div {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(201, 169, 110, 0.45);
+      margin-bottom: 6px;
+    }
+    .closing-email {
+      font-size: 13px;
+      font-weight: 300;
+      color: rgba(201, 169, 110, 0.55);
+    }
+
+    /* ── Print ── */
+    @media print {
+      body { background: #fff !important; color: #111 !important; padding: 32px !important; }
+      .container { max-width: 100% !important; }
+      .page-title span { color: #9a7a3a !important; }
+      .section-title, .summary-card-title, .page-title { color: #111 !important; }
+      .summary-card { border-color: #ccc !important; }
+      .summary-card-header { background: #f8f8f8 !important; }
+      .section-body, .process-text, .followup-box p, .comment-box .placeholder { color: #333 !important; }
+      .placeholder { border-color: #9a7a3a !important; color: #9a7a3a !important; background: #fffbe8 !important; }
+    }
+
+    @media (max-width: 480px) {
+      body { padding: 32px 16px 72px; }
+      .summary-row { flex-direction: column; gap: 4px; }
+      .summary-row-label { min-width: unset; }
+      .docket-box { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="brand">
+      <p class="brand-name">Forthright Legacy LLC &nbsp;·&nbsp; Regulatory Affairs Division</p>
+      <div class="brand-rule"></div>
+    </div>
+
+    <header class="page-header">
+      <h1 class="page-title">Strategic <span>Comment Writing</span></h1>
+      <p class="page-subtitle">Your regulatory engagement summary.</p>
+    </header>
+
+    <div class="gold-divider"><div class="gold-divider-diamond"></div></div>
+
+    <!-- ENGAGEMENT SUMMARY HEADER -->
+    <div class="summary-card">
+      <div class="summary-card-header">
+        <p class="summary-card-title">Engagement Summary</p>
+        <p class="summary-card-subtitle">Prepared for <span class="placeholder" style="font-size:11px;">[CLIENT NAME]</span></p>
+      </div>
+      <div class="summary-card-body">
+        <div class="summary-row">
+          <span class="summary-row-label">Date Prepared</span>
+          <span class="summary-row-value"><span class="placeholder">[DATE]</span></span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-row-label">Client</span>
+          <span class="summary-row-value"><span class="placeholder">[CLIENT NAME]</span></span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-row-label">Engagement Type</span>
+          <span class="summary-row-value">Federal Regulatory Public Comment</span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-row-label">Prepared By</span>
+          <span class="summary-row-value">Forthright Legacy LLC | Regulatory Affairs Division</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 1: DOCKET SUMMARY -->
+    <div class="section">
+      <p class="section-number">Section 01</p>
+      <h2 class="section-title">Docket Summary</h2>
+      <div class="summary-card">
+        <div class="summary-card-body">
+          <div class="summary-row">
+            <span class="summary-row-label">Agency Name</span>
+            <span class="summary-row-value"><span class="placeholder">[AGENCY NAME]</span></span>
+          </div>
+          <div class="summary-row">
+            <span class="summary-row-label">Docket Number</span>
+            <span class="summary-row-value"><span class="placeholder">[DOCKET NUMBER]</span></span>
+          </div>
+          <div class="summary-row">
+            <span class="summary-row-label">Rule Title</span>
+            <span class="summary-row-value"><span class="placeholder">[RULE TITLE]</span></span>
+          </div>
+          <div class="summary-row">
+            <span class="summary-row-label">Comment Period</span>
+            <span class="summary-row-value"><span class="placeholder">[COMMENT PERIOD]</span></span>
+          </div>
+          <div class="summary-row">
+            <span class="summary-row-label">Submission Date</span>
+            <span class="summary-row-value"><span class="placeholder">[SUBMISSION DATE]</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 2: YOUR POSITION ON RECORD -->
+    <div class="section">
+      <p class="section-number">Section 02</p>
+      <h2 class="section-title">Your Position on Record</h2>
+      <div class="comment-box">
+        <span class="placeholder">[COMMENT SUMMARY — 2–3 sentence summary of the core argument submitted on your organization's behalf, the primary relief sought, and the regulatory basis for your position.]</span>
+      </div>
+    </div>
+
+    <!-- SECTION 3: WHAT HAPPENS NEXT -->
+    <div class="section">
+      <p class="section-number">Section 03</p>
+      <h2 class="section-title">What Happens Next</h2>
+      <p class="section-body" style="margin-bottom: 20px;">Your comment is now part of the official administrative record. Here is what the federal rulemaking process looks like from this point forward:</p>
+      <ul class="process-list">
+        <li>
+          <span class="process-num">1</span>
+          <p class="process-text"><strong>Agency Review of All Public Comments.</strong> The issuing agency is required to review and consider every public comment submitted during the open period. Comments from organizations with demonstrated regulatory standing — like yours — carry significant weight in the agency's deliberative process.</p>
+        </li>
+        <li>
+          <span class="process-num">2</span>
+          <p class="process-text"><strong>Final Rule Published in the Federal Register.</strong> After completing its review, the agency issues a final rule in the Federal Register. The final rule must respond to substantive comments, making your on-record position a matter of public documentation.</p>
+        </li>
+        <li>
+          <span class="process-num">3</span>
+          <p class="process-text"><strong>Comment Period Typically Spans 30–90 Days.</strong> Federal comment windows commonly run 30, 60, or 90 days from the date of the proposed rule's Federal Register publication. Time from comment submission to final rule can range from several months to over a year, depending on rule complexity and agency workload.</p>
+        </li>
+        <li>
+          <span class="process-num">4</span>
+          <p class="process-text"><strong>Organizations May Submit Reply Comments.</strong> In some rulemakings, a supplemental or reply comment period is opened after initial comments are published. If applicable, your organization may have an additional opportunity to respond to other stakeholders' positions before the final rule is issued.</p>
+        </li>
+      </ul>
+    </div>
+
+    <!-- SECTION 4: DOCKET RECORD -->
+    <div class="section">
+      <p class="section-number">Section 04</p>
+      <h2 class="section-title">Your Docket Record</h2>
+      <p class="section-body" style="margin-bottom: 18px;">Your submitted comment is publicly accessible on Regulations.gov and forms part of the permanent administrative record for this rulemaking.</p>
+      <div class="docket-box">
+        <div class="docket-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+          </svg>
+        </div>
+        <div>
+          <p class="docket-link-label">Regulations.gov Confirmation</p>
+          <p class="docket-link-value"><span class="placeholder">[REGULATIONS.GOV CONFIRMATION LINK]</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 5: OPTIONAL FOLLOW-UP -->
+    <div class="section">
+      <p class="section-number">Section 05</p>
+      <h2 class="section-title">Optional Follow-Up Services</h2>
+      <div class="followup-box">
+        <p>If you'd like us to <strong>monitor this docket for agency responses</strong>, draft reply comments, or engage on related rulemakings as they arise, reply to this email to discuss scope. Ongoing regulatory monitoring is available as a retainer engagement, and reply-comment drafting is available on a per-rulemaking fixed-fee basis.</p>
+      </div>
+    </div>
+
+    <div class="gold-divider"><div class="gold-divider-diamond"></div></div>
+
+    <!-- CLOSING -->
+    <div class="closing-block">
+      <p class="closing-firm">Forthright Legacy LLC</p>
+      <p class="closing-div">Regulatory Affairs Division</p>
+      <p class="closing-email">randy.sumter@forthrightlegacy.org</p>
+    </div>
+
+  </div>
+</body>
+</html>
