@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Authority Extraction — 12-Month Thought-Leadership Plan | Forthright Legacy LLC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: #0a0f1e;
+      color: #f0ece4;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      line-height: 1.75;
+      min-height: 100vh;
+      padding: 56px 20px 96px;
+    }
+
+    .container { max-width: 680px; margin: 0 auto; }
+
+    /* ── Brand bar ── */
+    .brand {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .brand-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: #c9a96e;
+      margin-bottom: 6px;
+    }
+    .brand-rule { width: 48px; height: 1px; background: #c9a96e; margin: 0 auto; opacity: 0.55; }
+
+    /* ── Client name plate ── */
+    .client-plate {
+      text-align: center;
+      margin-bottom: 48px;
+      padding: 28px 32px;
+      border: 1px solid rgba(201, 169, 110, 0.2);
+      border-radius: 4px;
+      background: rgba(201, 169, 110, 0.03);
+    }
+    .client-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(201, 169, 110, 0.6);
+      margin-bottom: 8px;
+    }
+    .client-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 600;
+      color: #ffffff;
+      letter-spacing: 0.02em;
+    }
+
+    /* ── Page header ── */
+    .page-header { text-align: center; margin-bottom: 48px; }
+    .page-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(30px, 5.5vw, 44px);
+      font-weight: 600;
+      color: #ffffff;
+      line-height: 1.15;
+      margin-bottom: 14px;
+      letter-spacing: -0.01em;
+    }
+    .page-title span { color: #c9a96e; }
+    .page-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 300;
+      font-style: italic;
+      color: rgba(240, 236, 228, 0.7);
+    }
+
+    /* ── Intro ── */
+    .intro {
+      font-size: 16px;
+      font-weight: 300;
+      color: rgba(240, 236, 228, 0.82);
+      line-height: 1.8;
+      margin-bottom: 0;
+    }
+
+    /* ── Divider ── */
+    .gold-divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 40px 0;
+    }
+    .gold-divider::before, .gold-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #c9a96e 50%, transparent);
+      opacity: 0.35;
+    }
+    .gold-divider-diamond {
+      width: 6px;
+      height: 6px;
+      background: #c9a96e;
+      transform: rotate(45deg);
+      opacity: 0.75;
+      flex-shrink: 0;
+    }
+
+    /* ── Phase block ── */
+    .phase-block {
+      margin-bottom: 48px;
+    }
+    .phase-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+    .phase-badge {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      border: 1px solid rgba(201, 169, 110, 0.45);
+      border-radius: 3px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1px;
+    }
+    .phase-badge-mo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      color: rgba(201, 169, 110, 0.65);
+      text-transform: uppercase;
+    }
+    .phase-badge-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: #c9a96e;
+      line-height: 1;
+    }
+    .phase-title-wrap {}
+    .phase-tag {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: #c9a96e;
+      margin-bottom: 4px;
+    }
+    .phase-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 600;
+      color: #ffffff;
+      line-height: 1.2;
+    }
+
+    .action-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border-left: 1px solid rgba(201, 169, 110, 0.15);
+      margin-left: 26px;
+      padding-left: 28px;
+    }
+    .action-list li {
+      position: relative;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      font-size: 15px;
+      font-weight: 300;
+      color: rgba(240, 236, 228, 0.85);
+      line-height: 1.65;
+    }
+    .action-list li:last-child { border-bottom: none; }
+    .action-list li::before {
+      content: '';
+      position: absolute;
+      left: -34px;
+      top: 22px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #c9a96e;
+      opacity: 0.55;
+    }
+    .action-list strong {
+      color: #ffffff;
+      font-weight: 500;
+    }
+
+    /* ── Closing ── */
+    .closing-block {
+      text-align: center;
+      padding: 40px 32px;
+      border: 1px solid rgba(201, 169, 110, 0.18);
+      border-radius: 4px;
+      background: rgba(201, 169, 110, 0.025);
+      margin-top: 56px;
+    }
+    .closing-line {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 300;
+      font-style: italic;
+      color: rgba(240, 236, 228, 0.7);
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+    .closing-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(201, 169, 110, 0.55);
+    }
+
+    /* ── Print ── */
+    @media print {
+      body { background: #fff !important; color: #111 !important; padding: 32px !important; }
+      .container { max-width: 100% !important; }
+      .brand-name, .phase-tag, .client-label, .field-number { color: #888 !important; }
+      .page-title, .client-name, .phase-title { color: #111 !important; }
+      .page-title span { color: #9a7a3a !important; }
+      .action-list li { color: #333 !important; }
+      .action-list strong { color: #000 !important; }
+      .closing-line { color: #555 !important; }
+      .gold-divider::before, .gold-divider::after { background: linear-gradient(90deg, transparent, #9a7a3a 50%, transparent) !important; }
+    }
+
+    @media (max-width: 480px) {
+      body { padding: 32px 16px 72px; }
+      .client-plate { padding: 20px; }
+      .phase-header { gap: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="brand">
+      <p class="brand-name">Forthright Legacy LLC &nbsp;·&nbsp; The Office of the Managing Principal</p>
+      <div class="brand-rule"></div>
+    </div>
+
+    <!-- Client nameplate — Randy replaces this before sending -->
+    <div class="client-plate">
+      <p class="client-label">Prepared Exclusively For</p>
+      <p class="client-name">[CLIENT NAME]</p>
+    </div>
+
+    <header class="page-header">
+      <h1 class="page-title">Authority <span>Extraction</span></h1>
+      <h2 class="page-subtitle" style="font-size:19px; font-style:normal; font-weight:400; color:rgba(240,236,228,0.85);">12-Month Thought-Leadership Deployment Plan</h2>
+      <p class="page-subtitle" style="margin-top:10px;">Your post-publication playbook.</p>
+    </header>
+
+    <div class="gold-divider"><div class="gold-divider-diamond"></div></div>
+
+    <p class="intro">
+      Publishing your book is the opening move — not the finish line. The executives and institutions you want to reach make decisions over months of repeated exposure to your name, your ideas, and your voice. This 12-month deployment plan transforms your manuscript into a sustained authority engine: every phase is sequenced to compound your credibility, expand your audience, and convert readers into clients, partners, and legacy opportunities.
+    </p>
+
+    <div class="gold-divider"><div class="gold-divider-diamond"></div></div>
+
+    <!-- PHASE 1 -->
+    <div class="phase-block">
+      <div class="phase-header">
+        <div class="phase-badge">
+          <span class="phase-badge-mo">Mo</span>
+          <span class="phase-badge-num">1–2</span>
+        </div>
+        <div class="phase-title-wrap">
+          <p class="phase-tag">Phase One</p>
+          <h3 class="phase-title">Launch Phase</h3>
+        </div>
+      </div>
+      <ul class="action-list">
+        <li><strong>Amazon Launch Sequence.</strong> Activate your KDP author page with a professional bio, author photo, and verified Amazon author profile. Schedule your launch-day price promotion and confirm categories are optimized for maximum discoverability.</li>
+        <li><strong>LinkedIn Announcement Series.</strong> Publish a 5-post LinkedIn announcement series over 10 days — cover story, key insight teaser, behind-the-scenes writing journey, chapter excerpt, and a direct call to purchase. Pin the top-performing post to your profile header.</li>
+        <li><strong>Author Bio Update.</strong> Revise all professional bios across LinkedIn, email signature, company website, and speaking profiles to include "Author of [Book Title]" with a link to the Amazon listing.</li>
+        <li><strong>Press Release.</strong> Issue a professionally formatted press release announcing the book's publication, distributed to your industry's trade wire and posted on your company newsroom or LinkedIn Articles.</li>
+        <li><strong>3 Media Outlets to Pitch.</strong> Identify and pitch 3 targeted media outlets aligned to your reader profile (e.g. <em>Defense News</em>, <em>Federal Times</em>, or your industry's leading trade publication). Lead with the book's most newsworthy thesis.</li>
+        <li><strong>Podcast Pitch List.</strong> Build a list of 10 podcasts whose audiences match your ideal reader. Draft a 3-sentence pitch positioning you as a guest expert. Begin outreach in week 3 with a target of 2 booked appearances by end of Month 2.</li>
+      </ul>
+    </div>
+
+    <div class="gold-divider"><div class="gold-divider-diamond"></div></div>
+
+    <!-- PHASE 2 -->
+    <div class="phase-block">
+      <div class="phase-header">
+        <div class="phase-badge">
+          <span class="phase-badge-mo">Mo</span>
+          <span class="phase-badge-num">3–4</span>
+        </div>
+        <div class="phase-title-wrap">
+          <p class="phase-tag">Phase Two</p>
+          <h3 class="phase-title">Content Amplification</h3>
+        </div>
+      </div>
+      <ul class="action-list">
+        <li><strong>LinkedIn Article Series.</strong> Publish 6 long-form LinkedIn articles drawn directly from your book's chapters — one every 10 days. Each article should stand alone as a complete insight while referencing the book as the deeper resource. End each with a direct link to purchase.</li>
+        <li><strong>Speaking Bureau Submission.</strong> Submit your speaker profile and book credentials to 2–3 speaking bureaus or conference speaker databases relevant to your industry (e.g. NSA speakers, industry association annual conference CFPs).</li>
+        <li><strong>Trade Publication Byline Pitch.</strong> Pitch one bylined article to a leading trade publication in your industry. Adapt a chapter's core argument into a 900–1,200-word opinion piece. Acceptance amplifies your name beyond your existing network.</li>
+        <li><strong>Newsletter Launch Concept.</strong> Launch a monthly email newsletter — even a one-page "thought letter" — to your existing contacts and LinkedIn connections. Each issue draws one idea from the book and applies it to a current industry event or challenge.</li>
+        <li><strong>5 LinkedIn Posts Per Week Cadence.</strong> Establish a consistent posting rhythm of 5 posts per week: 2 insight posts, 1 book quote graphic, 1 engagement question, and 1 repurposed article excerpt. Consistency builds algorithmic reach.</li>
+        <li><strong>Amazon Review Campaign.</strong> Reach out personally to 20–30 professional contacts and ask for honest Amazon reviews. Reviews are the single most powerful factor in long-term book discoverability and sales velocity.</li>
+      </ul>
+    </div>
+
+    <div class="gold-divider"><div class="gold-divider-diamond"></div></div>
+
+    <!-- PHASE 3 -->
+    <div class="phase-block">
+      <div class="phase-header">
+        <div class="phase-badge">
+          <span class="phase-badge-mo">Mo</span>
+          <span class="phase-badge-num">5–8</span>
+        </div>
+        <div class="phase-title-wrap">
+          <p class="phase-tag">Phase Three</p>
+          <h3 class="phase-title">Authority Building</h3>
+        </div>
+      </div>
+      <ul class="action-list">
+        <li><strong>Keynote Pitch Deck Outline.</strong> Develop a 12-slide speaker deck that converts your book's core framework into a live keynote offering. Target 2 paid speaking engagements in Months 7–8 using this deck as your primary pitch asset.</li>
+        <li><strong>Forbes / Defense One Contributor Pitch.</strong> Submit a formal contributor application to <em>Forbes</em>, <em>Defense One</em>, or the leading publication in your sector. Position the book as evidence of your expertise. A single accepted article reaches hundreds of thousands of your target readers.</li>
+        <li><strong>Podcast Guest Circuit.</strong> Aim to appear on 6+ podcasts between Months 5 and 8. Create a one-page "guest profile" sheet with your bio, book link, 5 suggested episode topics, and a high-resolution headshot to simplify booking.</li>
+        <li><strong>Book Club / Reading Group Outreach.</strong> Identify professional associations, mastermind groups, and executive leadership programs that select books for cohort reading. Pitch your book as a featured selection with an offer to host a virtual Q&amp;A session.</li>
+        <li><strong>Co-Author or Foreword Request for 2nd Edition.</strong> Identify a respected peer, senior leader, or recognized name in your industry and invite them to contribute a foreword or co-author a companion chapter for a revised 2nd edition. This cross-pollination expands both audiences.</li>
+        <li><strong>LinkedIn Follower Milestone Targets.</strong> Set a follower target of 5,000 by Month 6 and 10,000 by Month 8. Milestone posts (announcing follower counts) drive organic reach. Tie each milestone to a book-related giveaway or exclusive content drop.</li>
+      </ul>
+    </div>
+
+    <div class="gold-divider"><div class="gold-divider-diamond"></div></div>
+
+    <!-- PHASE 4 -->
+    <div class="phase-block">
+      <div class="phase-header">
+        <div class="phase-badge">
+          <span class="phase-badge-mo">Mo</span>
+          <span class="phase-badge-num">9–12</span>
+        </div>
+        <div class="phase-title-wrap">
+          <p class="phase-tag">Phase Four</p>
+          <h3 class="phase-title">Legacy Positioning</h3>
+        </div>
+      </div>
+      <ul class="action-list">
+        <li><strong>Second Book Outline.</strong> Begin outlining your second manuscript. By Month 9, a first book's momentum — reviews, speaking, media placements — is strongest. A second title signals a career author rather than a one-time participant and amplifies total royalty revenue.</li>
+        <li><strong>Award Submissions.</strong> Research and submit to 3–5 relevant business book or industry awards (e.g. Axiom Business Book Awards, IBPA Benjamin Franklin Awards, industry-specific honors). Awards provide a permanent promotional credential and third-party validation.</li>
+        <li><strong>Industry Panel Nominations.</strong> Leverage your author credentials to pursue nominations for industry panels, advisory boards, and think-tank memberships. Your book is now a standing credential. Target 2 panel appearances or board invitations by year-end.</li>
+        <li><strong>Academic Citation Outreach.</strong> Identify university programs, research centers, or policy institutes whose curriculum intersects with your book's subject matter. Donate copies and propose the book as required reading or a reference resource. Academic adoption creates durable, citation-level credibility.</li>
+        <li><strong>Licensing / IP Documentation.</strong> Document the frameworks, models, and proprietary concepts from your book as intellectual property. Consult an IP attorney to explore licensing opportunities, workshop curriculum rights, and derivative work agreements. Your ideas are an asset class.</li>
+        <li><strong>Annual Thought-Leadership Audit.</strong> At Month 12, conduct a full audit: media placements earned, speaking engagements delivered, LinkedIn growth, Amazon review count, and total royalties. Use this data to brief any strategic partners, investors, or board members — and to set targets for Year Two of your authority platform.</li>
+      </ul>
+    </div>
+
+    <div class="gold-divider"><div class="gold-divider-diamond"></div></div>
+
+    <div class="closing-block">
+      <p class="closing-line">"The book is the credential. This plan is the campaign."</p>
+      <p class="closing-brand">Delivered by Forthright Legacy LLC &nbsp;|&nbsp; The Office of the Managing Principal</p>
+    </div>
+
+  </div>
+</body>
+</html>
