@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Authority Extraction — Client Intake | Forthright Legacy LLC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: #0a0f1e;
+      color: #f0ece4;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      min-height: 100vh;
+      padding: 48px 20px 80px;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* ── Brand bar ── */
+    .brand {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .brand-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 13px;
+      font-weight: 300;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #c9a96e;
+      margin-bottom: 6px;
+    }
+    .brand-rule {
+      width: 48px;
+      height: 1px;
+      background: #c9a96e;
+      margin: 0 auto;
+      opacity: 0.6;
+    }
+
+    /* ── Header ── */
+    .page-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .page-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(32px, 6vw, 46px);
+      font-weight: 600;
+      color: #ffffff;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+    .page-title span {
+      color: #c9a96e;
+    }
+    .page-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 300;
+      font-style: italic;
+      color: rgba(240, 236, 228, 0.75);
+      letter-spacing: 0.02em;
+    }
+
+    /* ── Divider ── */
+    .gold-divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 40px 0;
+    }
+    .gold-divider::before,
+    .gold-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #c9a96e 50%, transparent);
+      opacity: 0.4;
+    }
+    .gold-divider-diamond {
+      width: 6px;
+      height: 6px;
+      background: #c9a96e;
+      transform: rotate(45deg);
+      flex-shrink: 0;
+      opacity: 0.8;
+    }
+
+    /* ── Form ── */
+    form { display: flex; flex-direction: column; gap: 32px; }
+
+    .field-group { display: flex; flex-direction: column; gap: 8px; }
+
+    .field-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      color: #c9a96e;
+      text-transform: uppercase;
+    }
+
+    label {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(240, 236, 228, 0.9);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(201, 169, 110, 0.25);
+      border-radius: 4px;
+      color: #f0ece4;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 300;
+      padding: 14px 16px;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    input[type="text"]::placeholder,
+    input[type="email"]::placeholder,
+    textarea::placeholder {
+      color: rgba(240, 236, 228, 0.25);
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      border-color: rgba(201, 169, 110, 0.65);
+      background: rgba(201, 169, 110, 0.05);
+      box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.08);
+    }
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    /* ── Submit ── */
+    .submit-wrapper {
+      text-align: center;
+      margin-top: 8px;
+    }
+    .btn-submit {
+      display: inline-block;
+      background: linear-gradient(135deg, #c9a96e 0%, #b8903a 100%);
+      color: #0a0f1e;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 18px 48px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.15s;
+      text-decoration: none;
+    }
+    .btn-submit:hover {
+      opacity: 0.88;
+      transform: translateY(-1px);
+    }
+    .btn-submit:active {
+      transform: translateY(0);
+    }
+
+    /* ── Confidentiality note ── */
+    .confidentiality {
+      text-align: center;
+      font-size: 12px;
+      font-weight: 300;
+      color: rgba(240, 236, 228, 0.35);
+      letter-spacing: 0.04em;
+      margin-top: 24px;
+      font-style: italic;
+    }
+
+    /* ── Footer ── */
+    .page-footer {
+      text-align: center;
+      margin-top: 64px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(201, 169, 110, 0.12);
+    }
+    .footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(201, 169, 110, 0.5);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 480px) {
+      body { padding: 32px 16px 60px; }
+      .btn-submit { width: 100%; padding: 18px 24px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="brand">
+      <p class="brand-name">Forthright Legacy LLC &nbsp;·&nbsp; The Office of the Managing Principal</p>
+      <div class="brand-rule"></div>
+    </div>
+
+    <header class="page-header">
+      <h1 class="page-title">Authority <span>Extraction</span></h1>
+      <p class="page-subtitle">Complete this form to begin your executive book engagement.</p>
+    </header>
+
+    <div class="gold-divider"><div class="gold-divider-diamond"></div></div>
+
+    <form id="intakeForm" action="#" onsubmit="submitForm(event)">
+
+      <div class="field-group">
+        <span class="field-number">01</span>
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Your full name" required />
+      </div>
+
+      <div class="field-group">
+        <span class="field-number">02</span>
+        <label for="titleCompany">Title &amp; Company</label>
+        <input type="text" id="titleCompany" name="titleCompany" placeholder="e.g. CEO, Apex Defense Solutions" required />
+      </div>
+
+      <div class="field-group">
+        <span class="field-number">03</span>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="your@email.com" required />
+      </div>
+
+      <div class="field-group">
+        <span class="field-number">04</span>
+        <label for="background">Professional Background</label>
+        <textarea id="background" name="background" placeholder="In 3–5 sentences, describe your professional background and the industry you operate in." rows="5" required></textarea>
+      </div>
+
+      <div class="field-group">
+        <span class="field-number">05</span>
+        <label for="coreIdea">Core Book Idea</label>
+        <textarea id="coreIdea" name="coreIdea" placeholder="What is the single most important idea, lesson, or insight you want this book to communicate?" rows="4" required></textarea>
+      </div>
+
+      <div class="field-group">
+        <span class="field-number">06</span>
+        <label for="idealReader">Ideal Reader</label>
+        <input type="text" id="idealReader" name="idealReader" placeholder='e.g. "DoD acquisition officers," "Fortune 500 CFOs"' required />
+      </div>
+
+      <div class="field-group">
+        <span class="field-number">07</span>
+        <label for="definingMoments">Defining Career Moments</label>
+        <textarea id="definingMoments" name="definingMoments" placeholder="Describe 2–3 defining moments or turning points in your career that shaped your leadership philosophy." rows="6" required></textarea>
+      </div>
+
+      <div class="field-group">
+        <span class="field-number">08</span>
+        <label for="industryInsight">What Your Industry Gets Wrong</label>
+        <textarea id="industryInsight" name="industryInsight" placeholder="What do most people in your industry get wrong — and what do you know that they don't?" rows="5" required></textarea>
+      </div>
+
+      <div class="field-group">
+        <span class="field-number">09</span>
+        <label for="inspirations">Tone &amp; Inspirations</label>
+        <textarea id="inspirations" name="inspirations" placeholder="Are there any books, tones, or authors you admire and want this book to feel like?" rows="4"></textarea>
+      </div>
+
+      <div class="field-group">
+        <span class="field-number">10</span>
+        <label for="offlimits">Off-Limits / Sensitive Topics</label>
+        <textarea id="offlimits" name="offlimits" placeholder="Is there anything that is off-limits or sensitive that should NOT appear in the manuscript?" rows="4"></textarea>
+      </div>
+
+      <div class="submit-wrapper">
+        <button type="submit" class="btn-submit">Submit Intake →</button>
+        <p class="confidentiality">Your responses are confidential and used solely to craft your manuscript.</p>
+      </div>
+
+    </form>
+
+    <div class="gold-divider" style="margin-top: 48px;"><div class="gold-divider-diamond"></div></div>
+
+    <footer class="page-footer">
+      <p class="footer-brand">Forthright Legacy LLC &nbsp;|&nbsp; The Office of the Managing Principal</p>
+    </footer>
+
+  </div>
+
+  <script>
+    function submitForm(e) {
+      e.preventDefault();
+      const f = e.target;
+      const name    = f.fullName.value.trim();
+      const company = f.titleCompany.value.trim();
+      const email   = f.email.value.trim();
+      const body = [
+        "AUTHORITY EXTRACTION — CLIENT INTAKE",
+        "=".repeat(44),
+        "",
+        "01. Full Name: " + name,
+        "02. Title & Company: " + company,
+        "03. Email Address: " + email,
+        "",
+        "04. Professional Background:",
+        f.background.value.trim(),
+        "",
+        "05. Core Book Idea:",
+        f.coreIdea.value.trim(),
+        "",
+        "06. Ideal Reader:",
+        f.idealReader.value.trim(),
+        "",
+        "07. Defining Career Moments:",
+        f.definingMoments.value.trim(),
+        "",
+        "08. What Industry Gets Wrong:",
+        f.industryInsight.value.trim(),
+        "",
+        "09. Tone & Inspirations:",
+        f.inspirations.value.trim() || "(not provided)",
+        "",
+        "10. Off-Limits / Sensitive:",
+        f.offlimits.value.trim() || "(none specified)",
+        "",
+        "=".repeat(44),
+        "Submitted via Forthright Legacy LLC | Authority Extraction Intake Form"
+      ].join("\n");
+
+      const subject = encodeURIComponent("Authority Extraction Intake — " + name);
+      const bodyEnc = encodeURIComponent(body);
+      const mailto  = "mailto:randy.sumter@forthrightlegacy.org?subject=" + subject + "&body=" + bodyEnc;
+      window.location.href = mailto;
+    }
+  </script>
+</body>
+</html>
