@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Authority Extraction — The $15,000 Executive Book Program | Forthright Legacy LLC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { font-size: 16px; }
+
+    body {
+      background-color: #0a0f1e;
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      min-height: 100vh;
+      padding: 60px 24px 80px;
+    }
+
+    .page-wrap {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* ── Brand bar ── */
+    .brand-bar {
+      border-bottom: 1px solid rgba(201, 169, 110, 0.25);
+      padding-bottom: 28px;
+      margin-bottom: 48px;
+    }
+
+    .brand-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #c9a96e;
+    }
+
+    .brand-division {
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-top: 4px;
+    }
+
+    /* ── Eyebrow ── */
+    .eyebrow {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #c9a96e;
+      margin-bottom: 16px;
+    }
+
+    /* ── Headline ── */
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 5vw, 3.1rem);
+      font-weight: 600;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+
+    h1 span {
+      color: #c9a96e;
+    }
+
+    /* ── Subhead ── */
+    .subhead {
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.6;
+      margin-bottom: 48px;
+      max-width: 580px;
+    }
+
+    /* ── Divider ── */
+    .divider {
+      width: 40px;
+      height: 1px;
+      background: #c9a96e;
+      margin-bottom: 40px;
+      opacity: 0.6;
+    }
+
+    /* ── Who it's for ── */
+    .who-section {
+      margin-bottom: 44px;
+    }
+
+    .section-label {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #c9a96e;
+      margin-bottom: 12px;
+    }
+
+    .who-text {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.65;
+    }
+
+    /* ── Includes list ── */
+    .includes-section {
+      margin-bottom: 48px;
+    }
+
+    .includes-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .includes-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.55;
+    }
+
+    .includes-list li:first-child {
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .includes-list li::before {
+      content: '';
+      display: block;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #c9a96e;
+      margin-top: 8px;
+      flex-shrink: 0;
+    }
+
+    /* ── Price block ── */
+    .price-block {
+      background: rgba(201, 169, 110, 0.05);
+      border: 1px solid rgba(201, 169, 110, 0.2);
+      border-radius: 2px;
+      padding: 32px 36px;
+      margin-bottom: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .price-label {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 6px;
+    }
+
+    .price-amount {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.4rem, 6vw, 3.2rem);
+      font-weight: 600;
+      color: #c9a96e;
+      line-height: 1;
+    }
+
+    .price-note {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.4);
+      margin-top: 6px;
+    }
+
+    .price-badge {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #0a0f1e;
+      background: #c9a96e;
+      padding: 6px 14px;
+      border-radius: 1px;
+      white-space: nowrap;
+    }
+
+    /* ── CTA ── */
+    .cta-section {
+      text-align: center;
+    }
+
+    .cta-instruction {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: #c9a96e;
+      color: #0a0f1e;
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 18px 44px;
+      border-radius: 1px;
+      transition: background 0.2s ease, transform 0.15s ease;
+      line-height: 1;
+    }
+
+    .cta-btn:hover {
+      background: #ddbf88;
+      transform: translateY(-1px);
+    }
+
+    .cta-subtext {
+      margin-top: 20px;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.3);
+      font-style: italic;
+    }
+
+    /* ── Signature ── */
+    .signature {
+      margin-top: 64px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.25);
+      text-transform: uppercase;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 520px) {
+      body { padding: 40px 20px 60px; }
+      .price-block { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
+      .price-badge { align-self: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrap">
+
+    <!-- Brand Bar -->
+    <div class="brand-bar">
+      <div class="brand-name">Forthright Legacy LLC</div>
+      <div class="brand-division">IP Venture Studio</div>
+    </div>
+
+    <!-- Eyebrow -->
+    <div class="eyebrow">Executive Authority Program</div>
+
+    <!-- Headline -->
+    <h1>Authority<br /><span>Extraction</span></h1>
+
+    <!-- Subhead -->
+    <p class="subhead">
+      We ghostwrite your 30,000-word business book, publish it on Amazon under your name, and hand you a 12-month thought-leadership deployment plan — so you become the undisputed authority in your space.
+    </p>
+
+    <div class="divider"></div>
+
+    <!-- Who it's for -->
+    <div class="who-section">
+      <div class="section-label">Who This Is For</div>
+      <p class="who-text">
+        Defense and technology CEOs who want to convert their experience into a permanent intellectual asset — one that commands premium positioning, opens doors at the executive level, and outlasts any ad campaign.
+      </p>
+    </div>
+
+    <!-- What's Included -->
+    <div class="includes-section">
+      <div class="section-label">What's Included</div>
+      <ul class="includes-list">
+        <li>Full ghostwritten manuscript — 30,000+ words, written entirely in your voice and built on your IP</li>
+        <li>Amazon KDP publishing setup + ISBN registration under your name</li>
+        <li>12-month thought-leadership content calendar (LinkedIn, keynote, media)</li>
+        <li>LinkedIn positioning rewrite — bio, banner, featured section</li>
+        <li>Media pitch template for Forbes, DefenseOne, and relevant trade press</li>
+      </ul>
+    </div>
+
+    <!-- Price -->
+    <div class="price-block">
+      <div>
+        <div class="price-label">Investment</div>
+        <div class="price-amount">$15,000</div>
+        <div class="price-note">Flat rate — no retainers, no surprises</div>
+      </div>
+      <div class="price-badge">Flat Fee</div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-section">
+      <div class="cta-instruction">To Move Forward</div>
+      <a class="cta-btn" href="mailto:randy.sumter@forthrightlegacy.org?subject=YES%20-%20Authority%20Extraction">
+        Reply YES — Get Your Invoice
+      </a>
+      <p class="cta-subtext">
+        Reply YES to this email — I'll send your invoice within the hour.
+      </p>
+    </div>
+
+    <!-- Signature -->
+    <div class="signature">
+      The Office of the Managing Principal &nbsp;·&nbsp; Forthright Legacy LLC
+    </div>
+
+  </div>
+</body>
+</html>
